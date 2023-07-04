@@ -1,4 +1,4 @@
-#include "main.h
+#include "main.h"
 
 /**
  * _strchr - prints found c
