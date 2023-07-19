@@ -1,22 +1,21 @@
 #include "function_pointers.h"
-
 /**
- * array_iterator - execute function on each element of an array
+ * array_iterator - execute function on each element
+ * of an array
  * @array: given array
  * @size: size of the array
- * @action: pointer to function to be executed on each element
- * @data: additional data to be passed tto the action function (optional)
+ * @action: pointer to function
  * Return: void
  */
-void array_iterator(int *array, size_t size, void (*action)(int, void *), void *data)
+void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	int i;
+int i;
 
-	if (array == NULL || action == NULL)
-		return;
-	for (i = 0; i < (int)size; i++)
-	{
-		action(array[i], data);
-	}
+if (array == NULL || action == NULL)
+return;
 
+for (i = 0; i < (int) size; i++)
+{
+action(array[i]);
+}
 }
